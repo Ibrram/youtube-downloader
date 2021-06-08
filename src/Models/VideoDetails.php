@@ -48,8 +48,8 @@ class VideoDetails
         return Utils::arrayGet($this->videoDetails, 'viewCount');
     }
     
-        public function getThumbnail()
+    public function getThumbnail()
     {
-        return Utils::arrayGet($this->videoDetails, 'thumbnail');
+        return array_pop(Utils::arrayGet($this->videoDetails, 'thumbnail')['thumbnails'])['url'];
     }
 }
