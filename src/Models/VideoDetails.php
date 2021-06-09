@@ -52,4 +52,9 @@ class VideoDetails
     {
         return array_pop(Utils::arrayGet($this->videoDetails, 'thumbnail')['thumbnails'])['url'];
     }
+    
+    public function getContentLength()
+    {
+        return Utils::arrayGet($this->videoDetails, 'contentLength');
+    }
 }
